@@ -1,0 +1,63 @@
+Test Cases - Manual
+
+## Login
+
+  Scenario: Login com usuário bloqueado
+    Given the user is on the login page
+    When the user fills in the "Username" field with "locked_out_user"
+    And the user fills in the "Password" field with "secret_sauce"
+    And the user clicks the "Login" button
+    Then the user should see the message "Username and password do not match any user in this service" 
+
+## Add to cart
+
+  Scenario: Add a product to the cart and confirm it is there
+    Given the user is on a product page
+    When the user clicks the "Add to Cart" button
+    And the user clicks the shopping cart icon
+    Then the product should appear in the cart's item list
+
+## Remove from cart
+
+Scenario: Remove a product from the cart
+    Given the user has a product in the cart
+    When the user accesses the shopping cart
+    And the user clicks the "Remove" button next to the product
+    Then the product should be removed from the cart
+    And the cart should be empty (or contain the remaining items)
+
+ ## Exit cart and continue shopping
+
+  Scenario: Exit the cart and continue shopping
+    Given the user is on the shopping cart page
+    When the user clicks the "Continue Shopping" button
+    Then the user should be redirected to the products page
+    And the user can see the list of available products for purchase
+
+  ## Product Filter
+
+  Scenario: Filter from cheapest to most expensive
+    Given the user is on the products page
+    When the user selects the "From cheapest to most expensive" filter
+    Then the products should be displayed in ascending price order
+
+  ## Checkout
+
+  Scenario: Simulate a payment
+    Given the user has products in the cart
+    When the user clicks the "Checkout" button
+    And the user fills in the payment details
+      | Cardholder Name  | Card Number         | Expiration Date | CVV |
+      | John Smith       | 1234 5678 9123 4567 | 12/25           | 123 |
+    And the user clicks the "Next" button
+    Then the user should see the order confirmation page
+    And the user should see the order details
+
+  ## Logout
+
+  Scenario: Logout
+    Given the user is logged in
+    When the user clicks the profile icon
+    And the user clicks the "Logout" option
+    Then the user should be logged out of the system
+    And the user should be redirected to the home page
