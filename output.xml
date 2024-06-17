@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-06-16T20:19:56.502187" rpa="false" schemaversion="5">
+<suite id="s1" name="Logout" source="C:\Users\Sophia Araújo\OneDrive\Documentos\PROJETO\tests\logout.robot">
+<test id="s1-t1" name="Logout Scenario" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:19:56.728371" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-06-16T20:19:56.728371" elapsed="2.504456"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.232827" elapsed="0.047874"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:19:59.283693" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.281703" elapsed="0.283219"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:19:59.564922" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.564922" elapsed="0.085501"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:19:59.651421" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.651421" elapsed="0.083243"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>css=.inventory_list</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.735662" elapsed="0.015332"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:19:59.756968" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<arg>${LOGIN_URL}inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.750994" elapsed="0.005974"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=.bm-burger-button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.757965" elapsed="0.023851"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:19:59.783811" level="INFO">Clicking element 'css=.bm-burger-button'.</msg>
+<arg>css=.bm-burger-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.782820" elapsed="0.054651"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css=#logout_sidebar_link</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-06-16T20:19:59.839358" elapsed="0.263821"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:20:00.104176" level="INFO">Clicking element 'css=#logout_sidebar_link'.</msg>
+<arg>css=#logout_sidebar_link</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-06-16T20:20:00.104176" elapsed="0.047338"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=user-name</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-06-16T20:20:00.152512" elapsed="0.010553"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2024-06-16T20:20:00.171042" level="INFO">Current location is 'https://www.saucedemo.com/'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2024-06-16T20:20:00.164074" elapsed="0.006968"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-06-16T20:20:00.172040" elapsed="2.287383"/>
+</kw>
+<status status="PASS" start="2024-06-16T20:19:56.727372" elapsed="5.733030"/>
+</test>
+<status status="PASS" start="2024-06-16T20:19:56.504184" elapsed="5.957214"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Logout">Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
