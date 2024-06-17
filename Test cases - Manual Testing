@@ -2,7 +2,7 @@ Test Cases - Manual
 
 ## Login
 
-  Scenario: Login com usuário bloqueado
+  Scenario: Login
     Given the user is on the login page
     When the user fills in the "Username" field with "locked_out_user"
     And the user fills in the "Password" field with "secret_sauce"
